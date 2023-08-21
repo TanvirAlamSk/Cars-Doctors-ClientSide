@@ -20,7 +20,12 @@ const Login = () => {
         const password = event.target.password.value
         userLogin(email, password)
         event.target.reset()
-        navigate(from, { replace: true })
+        if (user) {
+            navigate(from, { replace: true })
+        } else {
+            navigate("/")
+        }
+
     }
 
     const handelFacebookLogin = () => {

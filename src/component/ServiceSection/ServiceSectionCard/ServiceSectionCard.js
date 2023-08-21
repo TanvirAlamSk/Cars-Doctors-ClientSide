@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ServiceSectionCard = ({ service }) => {
     const { title, img, price, _id } = service
-    console.log()
+
     return (
         <div>
             <div className="card w-96 md:w-80 lg:w-96 bg-base-100 shadow-xl">
