@@ -14,7 +14,7 @@ const Product = ({ product }) => {
                     <h2 className="card-title h-20">{name}</h2>
                     <div className="card-actions justify-between">
                         <h5 className='font-semibold text-orange-600'>Price: ${(parseInt(price)) / 200}</h5>
-                        <Link to={`/checkout/${_id}`}><button className="text-orange-600"><FaArrowRight></FaArrowRight></button></Link>
+                        <Link to={`/order/${_id}`}><button className="text-orange-600"><FaArrowRight></FaArrowRight></button></Link>
 
                     </div>
                 </div>

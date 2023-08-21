@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ServiceSectionCard = ({ service }) => {
     const { title, img, price, _id } = service
+    console.log()
     return (
         <div>
             <div className="card w-96 md:w-80 lg:w-96 bg-base-100 shadow-xl">
@@ -14,7 +15,10 @@ const ServiceSectionCard = ({ service }) => {
                     <h2 className="card-title">{title}</h2>
                     <div className="card-actions justify-between">
                         <h5 className='font-semibold text-orange-600'>Price: ${price}</h5>
-                        <Link to={`/service/${_id}`}><button className="text-orange-600"><FaArrowRight></FaArrowRight></button></Link>
+                        <Link to={`/service/${_id}`}>
+                            <button className="text-orange-600">
+                                <FaArrowRight></FaArrowRight></button>
+                        </Link>
                     </div>
                 </div>
             </div>

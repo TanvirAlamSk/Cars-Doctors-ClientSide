@@ -6,7 +6,7 @@ import location from '../../assets/icons/Location_Red_Icon_kful3t.svg'
 
 const Banner = () => {
     return (
-        <div className='my-6 flex flex-col md:flex-row gap-3 justify-between px-10 bg-black py:5 lg:py-10 text-white rounded-md'>
+        <div className='my-6 mt-32 flex flex-col md:flex-row gap-3 justify-between px-10 bg-black py:5 lg:py-10 text-white rounded-md'>
             <div className='flex justify-between items-center '>
                 <div>
                     <img className='w-8 mr-2' src={clocksCalendar} alt=''></img>

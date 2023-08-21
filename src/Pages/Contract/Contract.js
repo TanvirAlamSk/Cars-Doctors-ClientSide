@@ -10,8 +10,8 @@ function Contract() {
             <div className="w-full flex items-center justify-center py-20 my-12">
                 <div className=" top-40 bg-white shadow rounded py-12 lg:px-28 px-8">
                     <p className="md:text-3xl text-xl font-bold leading-7 text-center text-gray-700">Let’s chat and get a quote!</p>
-                    <div className="md:flex items-center mt-12">
-                        <div className="md:w-72 flex flex-col">
+                    <div className="md:flex items-center mt-12 text-left">
+                        <div className="md:w-72 flex flex-col ">
                             <label className="text-base font-semibold leading-none text-gray-800">Name</label>
                             <input tabIndex={0} arial-label="Please input name" type="name" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100" placeholder="Please input  name" />
                         </div>
@@ -20,7 +20,7 @@ function Contract() {
                             <input tabIndex={0} arial-label="Please input email address" type="name" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100" placeholder="Please input email address" />
                         </div>
                     </div>
-                    <div className="md:flex items-center mt-8">
+                    <div className="md:flex items-center mt-8 text-left">
                         <div className="md:w-72 flex flex-col">
                             <label className="text-base font-semibold leading-none text-gray-800">Company name</label>
                             <input tabIndex={0} role="input" arial-label="Please input company name" type="name" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 " placeholder="Please input company name" />

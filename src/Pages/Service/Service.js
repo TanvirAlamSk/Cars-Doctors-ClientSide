@@ -6,7 +6,7 @@ import logo from "../../assets/logo.svg"
 
 const Service = () => {
     const service = useLoaderData()
-    // console.log(service)
+    console.log(service)
     const { img, description, price, title, facility } = service
     return (
         <div className='flex flex-col md:flex-row w-full my-10'>
@@ -20,7 +20,7 @@ const Service = () => {
                     }
                 </div>
             </div>
-            <div className='w-full md:w-1/4 mg:mt-6'>
+            <div className='w-full md:w-1/4 md:mt-6'>
                 <ul className='bg-slate-200 py-10 rounded'>
                     <Link to="/service/635b591a1dafe382a9da8c96">
                         <li className=' my-2'>
@@ -78,7 +78,9 @@ const Service = () => {
 
                 </div>
                 <h3 className='text-3xl font-bold text-left mt-3'>Price: ${price}</h3>
-                <button className='btn my-5 w-full bg-orange-500 border-none text-white font-semibold hover:bg-orange-700'>Check Out</button>
+                <Link to="/checkout">
+                    <button className='btn my-5 w-full bg-orange-500 border-none text-white font-semibold hover:bg-orange-700'>Check Out</button>
+                </Link>
             </div>
 
         </div>

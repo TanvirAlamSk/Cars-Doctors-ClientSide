@@ -3,9 +3,10 @@ import ServiceSectionCard from './ServiceSectionCard/ServiceSectionCard';
 
 const ServiceSection = () => {
     const [services, setServices] = useState([]);
+    console.log(services)
 
     useEffect(() => {
-        fetch("services.json")
+        fetch("http://localhost:5000/services")
             .then((responce) => responce.json())
             .then((data) => setServices(data))
     }, [])
@@ -22,7 +23,7 @@ const ServiceSection = () => {
                 }
             </div>
 
-            <button className='btn btn-outline rounded text-orange-500 hover:text-white hover:bg-orange-500 mt-10'>More Services</button>
+            {/* <button className='btn btn-outline rounded text-orange-500 hover:text-white hover:bg-orange-500 mt-10'>More Services</button> */}
 
         </div>
     );

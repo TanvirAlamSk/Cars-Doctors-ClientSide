@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Products = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch("catalog.json")
+        fetch("http://localhost:5000/products")
             .then((responce) => responce.json())
             .then((data) => setProducts(data))
     }, [])

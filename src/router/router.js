@@ -1,6 +1,7 @@
 import About from "../Pages/About/About";
 import AllProduct from "../Pages/AllProduct/AllProduct";
 import Blog from "../Pages/Blog/Blog";
+import BuyProduct from "../Pages/BuyProduct/BuyProduct";
 import Checkout from "../Pages/Checkout/Checkout";
 import Contract from "../Pages/Contract/Contract";
 import Dashboard from "../Pages/Dashboard/Dashboard";
@@ -22,7 +23,7 @@ export const router = createBrowserRouter([
                 path: "/", element: <Home></Home>
             },
             {
-                path: "/product", element: <AllProduct></AllProduct>, loader: () => fetch("catalog.json")
+                path: "/product", element: <AllProduct></AllProduct>, loader: () => fetch("http://localhost:5000/services")
             },
             {
                 path: "/service", element: <ServiceSection></ServiceSection>
@@ -45,8 +46,8 @@ export const router = createBrowserRouter([
                 path: "/contract", element: <Contract></Contract>
             },
             {
-                path: "/checkout/:id", element: <PrivateRouter>
-                    <Checkout></Checkout>
+                path: "/order/:id", element: <PrivateRouter>
+                    <BuyProduct></BuyProduct>
                 </PrivateRouter>,
                 loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
             },
