@@ -58,7 +58,10 @@ const UserContext = ({ children }) => {
                 const currentUser = userCredential.user
                 notifyLogin()
             })
-            .catch((error) => notifyError())
+            .catch((error) => {
+                setUser("")
+                notifyError()
+            })
     }
     const googleSignin = () => {
         setLoader(true)
