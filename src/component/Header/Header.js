@@ -68,13 +68,17 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className=" flex space-x-5 justify-center items-center pl-2">
-                        <div className="relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 ">
-                            <Link to="/dashboard"><BiSolidDashboard className='h-6 w-6 text-blue-600' title='dashboaed'></BiSolidDashboard></Link>
 
-                        </div>
                         {
                             user ?
-                                <button onClick={handelLogout} className='btn btn-sm btn-warning'>LogOut</button>
+                                <>
+                                    <div className="relative cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 ">
+                                        <Link to="/dashboard"><BiSolidDashboard className='h-6 w-6 text-blue-600' title='dashboaed'></BiSolidDashboard>
+                                        </Link>
+
+                                    </div>
+                                    <button onClick={handelLogout} className='btn btn-sm btn-warning'>LogOut</button>
+                                </>
 
                                 :
                                 <Link to="/login"><button className='btn btn-sm btn-warning'>Login</button></Link>

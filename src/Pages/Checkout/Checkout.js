@@ -49,7 +49,7 @@ const Checkout = () => {
         }
 
 
-        fetch(`http://localhost:5000/service/${item?._id}`, {
+        fetch(`https://cars-doctor-server-side.vercel.app/service/${item?._id}`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"

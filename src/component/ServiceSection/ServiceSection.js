@@ -6,7 +6,7 @@ const ServiceSection = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:5000/services")
+        fetch("https://cars-doctor-server-side.vercel.app/services")
             .then((responce) => responce.json())
             .then((data) => setServices(data))
     }, [])

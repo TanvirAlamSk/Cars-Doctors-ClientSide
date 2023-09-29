@@ -50,7 +50,7 @@ const BuyProduct = () => {
         }
 
 
-        fetch(`http://localhost:5000/product/${user?._id}`, {
+        fetch(`https://cars-doctor-server-side.vercel.app/product/${user?._id}`, {
             method: "POST",
             headers: {
                 "content-type": "application/json"

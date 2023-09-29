@@ -10,7 +10,7 @@ const ProductDashBoard = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/order?email=${user?.email}`)
+        fetch(`https://cars-doctor-server-side.vercel.app/products/order?email=${user?.email}`)
             .then((responce) => responce.json())
             .then((data) => setOrders(data))
     }, [user?.email])
@@ -26,7 +26,7 @@ const ProductDashBoard = () => {
         return <Loader></Loader>
     }
     const handleDelate = (id) => {
-        fetch(`http://localhost:5000/product/${id}`, {
+        fetch(`https://cars-doctor-server-side.vercel.app/product/${id}`, {
             method: "DELETE"
         })
             .then((responce) => responce.json())

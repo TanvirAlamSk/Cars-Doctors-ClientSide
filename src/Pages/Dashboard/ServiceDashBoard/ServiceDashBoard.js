@@ -10,7 +10,7 @@ const ServiceDashBoard = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/order?email=${user?.email}`)
+        fetch(`https://cars-doctor-server-side.vercel.app/services/order?email=${user?.email}`)
             .then((responce) => responce.json())
             .then((data) => setOrders(data))
     }, [user?.email])
@@ -26,7 +26,7 @@ const ServiceDashBoard = () => {
     }
 
     const handleDelate = (id) => {
-        fetch(`http://localhost:5000/service/${id}`, {
+        fetch(`https://cars-doctor-server-side.vercel.app/service/${id}`, {
             method: "DELETE"
         })
             .then((responce) => responce.json())

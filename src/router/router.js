@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
                 path: "/", element: <Home></Home>
             },
             {
-                path: "/product", element: <AllProduct></AllProduct>, loader: () => fetch("http://localhost:5000/products")
+                path: "/product", element: <AllProduct></AllProduct>, loader: () => fetch("https://cars-doctor-server-side.vercel.app/products")
             },
             {
                 path: "/service", element: <ServiceSection></ServiceSection>
@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
                 path: "/service/:id", element: <PrivateRouter>
                     <Service></Service>
                 </PrivateRouter>,
-                loader: ({ params }) => fetch(`http://localhost:5000/service/${params.id}`)
+                loader: ({ params }) => fetch(`https://cars-doctor-server-side.vercel.app/service/${params.id}`)
             },
             {
                 path: "/about", element: <About></About>
@@ -47,13 +47,13 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/checkout/:id", element: <Checkout></Checkout>,
-                loader: ({ params }) => fetch(`http://localhost:5000/service/${params.id}`)
+                loader: ({ params }) => fetch(`https://cars-doctor-server-side.vercel.app/service/${params.id}`)
             },
             {
                 path: "/order/:id", element: <PrivateRouter>
                     <BuyProduct></BuyProduct>
                 </PrivateRouter>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+                loader: ({ params }) => fetch(`https://cars-doctor-server-side.vercel.app/product/${params.id}`)
             },
             {
                 path: "/blog", element: <Blog></Blog>
